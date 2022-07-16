@@ -5,12 +5,6 @@ import (
 	"net/http"
 )
 
-type JSONResponse struct {
-	Error   bool        `json:"error"`
-	Message string      `json:"message"`
-	Data    interface{} `json:"data,omitempty"`
-}
-
 func (app *Config) Broker(w http.ResponseWriter, r *http.Request) {
 	payload := JSONResponse{
 		Error:   false,
